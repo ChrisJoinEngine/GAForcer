@@ -365,7 +365,6 @@ public class WebParser
 		{
 			if (response!=null)
 			{
-				System.out.println("We are here at the top");
 				result=response.header(LOCATION_HEADER);
 			}
 			else
