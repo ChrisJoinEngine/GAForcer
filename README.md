@@ -68,7 +68,7 @@ RISKS:
 ———————————
 
 You can get your IP blocked. You can cause other unknown damage. Use it wisely or don’t get caught. I’m not to
-blame for any damages caused by this tool. That’s about it.
+blame for any damages caused by this tool. That’s about it..
 
 
 
