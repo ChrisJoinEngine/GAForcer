@@ -53,8 +53,11 @@ blame for any damages caused by this tool. That’s about it..
 ## SAMPLE USES:
 Recognized flags are: 
 -h  : display the help message (this) and then exit the program 
+
 -p  : causes the program to pause after every generation 
+
 -db : disable brute force mode (will only confirm on redirect, ignores 200 OK response)
+
 -dr : disable redirect mode (will only confirm on 200 OK, ignores 301,302, etc. response)
 -k   [file]   : only alert on keywords from a provided file (DB still saves hits) 
 -i   [number] : the number of tries to issue per generation child. Default is 10
