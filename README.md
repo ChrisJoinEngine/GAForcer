@@ -1,22 +1,28 @@
 WHAT THIS IS:
+
 ———————————
 
 An application used to brute force compressed URLs in an intelligent manner. It makes up guesses by leveraging a machine learning algorithm  (genetic algorithm). The better a guess generating seed does, the more likely it is to continue to be used. Traits from well-performing seeds are combined and a seed has a chance to randomly mutate an attribute. Recorded successful guesses are stored in an SQLite file that may be parsed and grown as needed.
 
 
+
 USES:
+
 ———————————
 
 This was originally designed to catch compressed URLs and extract them (think along the lines of somesite.ly/somethingrandom); subsequently, the application has a lot of options to run with this in mind (such as alerting on key terms provided by a file). That being said, it works for other things too, with another example use being to access a GUID used in a restricted URL (such as a document sharing link). While the application alerts as a hit on redirects or 200, it does transparently support SOX and HTTP proxies, so with some creativity, it may be altered to accommodate a wider variety of uses--NOTE: full support is not there for requests from file option yet. With the combination  of flags it may be used as  a raw brute forcing tool, and offers a considerable amount of flexibility.
 
 
+
 OPTIMAL RUN:
+
 ———————————
 
 The default options are NOT optimal for all (or even most) situations. They are designed to be somewhat less intrusive than a true optimal configuration may be. In order for the application to behave in a fashion that is more than just random, target space must be saturated, or a seed attempt must have enough tries to obtain decent data as to
 it’s true success rate. This means that each generation thread should make enough attempts (the iteration flag -i at the time of writing) to be statistically significant, something like 100, 1000, or larger if your keyspace saturation is lower.
 
 Similarly, to prevent your population from being to homogeneous, you have a decent thread starting size  (that’s the size flag, -s, at the time of writing this). Depending on your use case, a population of 25 may be sufficient in most cases. A POPULATION SIZE OF LESS THAN AT LEAST 10 WILL LIKELY NOT BE AS EFFECTIVE.
+
 
 
 FILES GENERATED:
@@ -30,13 +36,17 @@ UpcomingGeneration.txt; this is used as a save file, so that on restarting the a
 Discovered_Links.sqlite; this is exactly what it sounds like (cache + lookup). e.g. select GENERATED_URL from RESULTS where ACTUAL_URL like '%facebook%’
 
 
+
 RISKS:
+
 ———————————
 
 You can get your IP blocked. You can cause other unknown damage. Use it wisely or don’t get caught. I’m not to blame for any damages caused by this tool. That’s about it.
 
 
+
 SAMPLE USES:
+
 ———————————
 
 Recognized flags are: 
